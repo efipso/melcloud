@@ -196,3 +196,10 @@ class Device(ABC):
         This operation seems to be off limits.
         """
         return None
+
+    @property
+    def wifi_signal(self) -> Optional[int]:
+        """Return wifi signal in dBm (negative value)."""
+        if self._device_conf is None:
+            return None
+        return self._device_conf.get("Device", {}).get("WifiSignalStrength", None)

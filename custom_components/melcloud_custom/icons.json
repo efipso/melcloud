@@ -9,6 +9,9 @@
       },
       "outside_temperature": {
         "default": "mdi:fhome-thermometer-outline"
+      },
+      "wifi_signal": {
+        "default": "mdi:wifi"
       }
     }
   },
