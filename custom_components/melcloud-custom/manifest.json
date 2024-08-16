@@ -1,0 +1,12 @@
+{
+  "domain": "melcloud_custom",
+  "name": "MELCloud",
+  "codeowners": [
+    "@efipso"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/efipso/melcloud",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/efipso/melcloud/issues",
+  "version": "1.0.0"
+}
