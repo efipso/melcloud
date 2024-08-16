@@ -3,8 +3,8 @@
 from datetime import timedelta
 from typing import Any, Dict, List, Optional
 
-from .device import EFFECTIVE_FLAGS, Device
 from .client import Client
+from .device import EFFECTIVE_FLAGS, Device
 
 PROPERTY_TARGET_TEMPERATURE = "target_temperature"
 PROPERTY_OPERATION_MODE = "operation_mode"
@@ -190,8 +190,7 @@ class AtaDevice(Device):
         """
         if self._device_conf is None:
             return None
-        device = self._device_conf.get("Device", {})
-        value = device.get("CurrentEnergyConsumed", None)
+        value = self._device_conf.get("Device", {}).get("CurrentEnergyConsumed", None)
         if value is None:
             return None
 

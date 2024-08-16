@@ -3,19 +3,18 @@
 from __future__ import annotations
 
 import asyncio
+import logging
 from collections.abc import Mapping
 from http import HTTPStatus
-import logging
 from typing import Any
 
-from aiohttp import ClientError, ClientResponseError
-from . import pymelcloud
 import voluptuous as vol
-
+from aiohttp import ClientError, ClientResponseError
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_PASSWORD, CONF_TOKEN, CONF_USERNAME
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
+from . import pymelcloud
 from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)

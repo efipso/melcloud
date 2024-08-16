@@ -3,14 +3,11 @@
 from __future__ import annotations
 
 import asyncio
-from datetime import timedelta
 import logging
+from datetime import timedelta
 from typing import Any
 
 from aiohttp import ClientConnectionError, ClientResponseError
-from .pymelcloud import Device, get_devices
-from .pymelcloud.atw_device import Zone
-
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_TOKEN, Platform
 from homeassistant.core import HomeAssistant
@@ -20,6 +17,8 @@ from homeassistant.helpers.device_registry import CONNECTION_NETWORK_MAC, Device
 from homeassistant.util import Throttle
 
 from .const import DOMAIN
+from .pymelcloud import Device, get_devices
+from .pymelcloud.atw_device import Zone
 
 _LOGGER = logging.getLogger(__name__)
 

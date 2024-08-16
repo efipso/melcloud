@@ -5,16 +5,7 @@ from __future__ import annotations
 from datetime import timedelta
 from typing import Any
 
-from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW, AtaDevice, AtwDevice
-from .pymelcloud import ata_device as ata
-from .pymelcloud import atw_device as atw
-from .pymelcloud.atw_device import (
-    PROPERTY_ZONE_1_OPERATION_MODE,
-    PROPERTY_ZONE_2_OPERATION_MODE,
-    Zone,
-)
 import voluptuous as vol
-
 from homeassistant.components.climate import (
     ATTR_HVAC_MODE,
     DEFAULT_MAX_TEMP,
@@ -27,7 +18,8 @@ from homeassistant.components.climate import (
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import ATTR_TEMPERATURE, UnitOfTemperature
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers import config_validation as cv, entity_platform
+from homeassistant.helpers import config_validation as cv
+from homeassistant.helpers import entity_platform
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import MelCloudDevice
@@ -41,6 +33,14 @@ from .const import (
     DOMAIN,
     SERVICE_SET_VANE_HORIZONTAL,
     SERVICE_SET_VANE_VERTICAL,
+)
+from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW, AtaDevice, AtwDevice
+from .pymelcloud import ata_device as ata
+from .pymelcloud import atw_device as atw
+from .pymelcloud.atw_device import (
+    PROPERTY_ZONE_1_OPERATION_MODE,
+    PROPERTY_ZONE_2_OPERATION_MODE,
+    Zone,
 )
 
 SCAN_INTERVAL = timedelta(seconds=60)

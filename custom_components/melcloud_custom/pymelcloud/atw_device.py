@@ -1,4 +1,5 @@
 """Air-To-Water (DeviceType=1) device definition."""
+
 from typing import Any, Callable, Dict, List, Optional
 
 from .device import EFFECTIVE_FLAGS, Device

@@ -4,13 +4,6 @@ from __future__ import annotations
 
 from typing import Any
 
-from .pymelcloud import DEVICE_TYPE_ATW, AtwDevice
-from .pymelcloud.atw_device import (
-    PROPERTY_OPERATION_MODE,
-    PROPERTY_TARGET_TANK_TEMPERATURE,
-)
-from .pymelcloud.device import PROPERTY_POWER
-
 from homeassistant.components.water_heater import (
     DEFAULT_MAX_TEMP,
     DEFAULT_MIN_TEMP,
@@ -24,6 +17,12 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import DOMAIN, MelCloudDevice
 from .const import ATTR_STATUS
+from .pymelcloud import DEVICE_TYPE_ATW, AtwDevice
+from .pymelcloud.atw_device import (
+    PROPERTY_OPERATION_MODE,
+    PROPERTY_TARGET_TANK_TEMPERATURE,
+)
+from .pymelcloud.device import PROPERTY_POWER
 
 
 async def async_setup_entry(

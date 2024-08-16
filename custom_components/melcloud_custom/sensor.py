@@ -2,12 +2,9 @@
 
 from __future__ import annotations
 
-from collections.abc import Callable
 import dataclasses
+from collections.abc import Callable
 from typing import Any
-
-from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW
-from .pymelcloud.atw_device import Zone
 
 from homeassistant.components.sensor import (
     SensorDeviceClass,
@@ -17,15 +14,17 @@ from homeassistant.components.sensor import (
 )
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import (
+    SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
     UnitOfEnergy,
     UnitOfTemperature,
-    SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
 from . import MelCloudDevice
 from .const import DOMAIN
+from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW
+from .pymelcloud.atw_device import Zone
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)

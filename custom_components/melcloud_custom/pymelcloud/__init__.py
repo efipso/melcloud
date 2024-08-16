@@ -5,7 +5,7 @@ from typing import Dict, List, Optional
 
 from aiohttp import ClientSession
 
-from ata_device import AtaDevice
+from .ata_device import AtaDevice
 from .atw_device import AtwDevice
 from .client import Client as _Client
 from .client import login as _login
