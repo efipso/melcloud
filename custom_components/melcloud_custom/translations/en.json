@@ -89,7 +89,7 @@
         "name": "Flow return Temperature"
       },
       "wifi_signal": {
-        "name": "Wifi Signal"
+        "name": "Wifi Signal Strength"
       }
     }
   }

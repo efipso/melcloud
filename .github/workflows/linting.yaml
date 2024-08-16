@@ -24,5 +24,5 @@ jobs:
           pip install -r requirements.txt
       - name: flake8
         run: flake8 --max-line-length 100 .
-      - name: Black
-        run: black --line-length 100 --check .
+      - name: isort
+        run: isort --diff --check .
