@@ -89,7 +89,7 @@ class MelDeviceBinarySensor(BinarySensorEntity):
         self._attr_device_info = api.device_info
 
     @property
-    def is_on(self) -> bool:
+    def is_on(self) -> bool | False:
         """Return the state of the binary sensor."""
         return self.entity_description.value_fn(self._api)
 
