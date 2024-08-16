@@ -2,7 +2,13 @@
   "entity": {
     "sensor": {
       "energy_consumed": {
-        "default": "mdi:factory"
+        "default": "mdi:lightning-bolt"
+      },
+      "room_temperature": {
+        "default": "mdi:home-thermometer"
+      },
+      "outside_temperature": {
+        "default": "mdi:fhome-thermometer-outline"
       }
     }
   },

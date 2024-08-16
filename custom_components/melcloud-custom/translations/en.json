@@ -76,6 +76,9 @@
       "room_temperature": {
         "name": "Room Temperature"
       },
+      "outside_temperature": {
+        "name": "Outside Temperature"
+      },
       "tank_temperature": {
         "name": "Tank Temperature"
       },

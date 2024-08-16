@@ -43,6 +43,15 @@ ATA_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
         enabled=lambda x: True,
     ),
     MelcloudSensorEntityDescription(
+        key="outside_temperature",
+        translation_key="outside_temperature",
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        device_class=SensorDeviceClass.TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        value_fn=lambda x: x.device.outside_temperature,
+        enabled=lambda x: True,
+    ),
+    MelcloudSensorEntityDescription(
         key="energy",
         translation_key="energy_consumed",
         native_unit_of_measurement=UnitOfEnergy.KILO_WATT_HOUR,

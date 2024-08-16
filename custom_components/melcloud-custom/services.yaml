@@ -1,7 +1,7 @@
 set_vane_horizontal:
   target:
     entity:
-      integration: melcloud
+      integration: melcloud-custom
       domain: climate
   fields:
     position:
@@ -13,7 +13,7 @@ set_vane_horizontal:
 set_vane_vertical:
   target:
     entity:
-      integration: melcloud
+      integration: melcloud-custom
       domain: climate
   fields:
     position:

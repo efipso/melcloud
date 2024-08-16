@@ -17,3 +17,4 @@ It's done basically for my own use.
 The base code is native Home Assistant [MELCloud component](https://github.com/home-assistant/core/tree/dev/homeassistant/components/melcloud), with the following modifications:
 
 1. [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved and I want to add some modifications to it.
+1. Added Outside temperature sensor for ATA Devices (only work when Outside Unit is working)

@@ -1,6 +1,6 @@
 """Constants for the MELCloud Climate integration."""
 
-DOMAIN = "melcloud"
+DOMAIN = "melcloud-custom"
 
 CONF_POSITION = "position"
 
