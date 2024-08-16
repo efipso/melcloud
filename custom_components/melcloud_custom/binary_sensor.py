@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-import dataclasses
+from dataclasses import dataclass
 from collections.abc import Callable
 from typing import Any
 
@@ -19,6 +19,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from . import MelCloudDevice
 from .const import DOMAIN
 from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW
+
 
 @dataclass
 class MelcloudBinarySensorEntityDescription(BinarySensorEntityDescription):
@@ -46,6 +47,7 @@ ATW_BINARY_SENSORS: tuple[MelcloudBinarySensorEntityDescription, ...] = (
         enabled=lambda x: True,
     ),
 )
+
 
 async def async_setup_entry(
     hass: HomeAssistant, entry: ConfigEntry, async_add_entities: AddEntitiesCallback
