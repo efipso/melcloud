@@ -209,7 +209,7 @@ class Device(ABC):
         """Return True if the device has error state."""
         if self._state is None:
             return False
-        return self._state.get("HasError", False)
+        return self._device_conf.get("Device", {}).get("HasError", False)
 
     @property
     def error_code(self) -> Optional[str]:
@@ -219,4 +219,4 @@ class Device(ABC):
         """
         if self._state is None:
             return None
-        return self._state.get("ErrorCode", None)
+        return self._device_conf.get("Device", {}).get("ErrorCode", None)
