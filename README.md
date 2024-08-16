@@ -19,3 +19,4 @@ The base code is native Home Assistant [MELCloud component](https://github.com/h
 1. [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved and I want to add some modifications to it.
 1. Added Outside temperature sensor for ATA Devices (only work when Outside Unit is working)
 1. Added WIFI Signal Strength sensor
+1. Added Error State sensor
