@@ -13,10 +13,19 @@ This custom component is based on the native Home Assistant [MELCloud component]
 
 It's done basically for my own use.
 
-## Custom component additional features
-The base code is native Home Assistant [MELCloud component](https://github.com/home-assistant/core/tree/dev/homeassistant/components/melcloud), with the following modifications:
+## Changelog
 
-1. [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved and I want to add some modifications to it.
-1. Added Outside temperature sensor for ATA Devices (only work when Outside Unit is working)
-1. Added WIFI Signal Strength sensor
-1. Added Error State sensor
+v1.3
+- Added Error State sensor
+
+v1.2.1
+- Minor fixes
+
+v1.2
+- Added WIFI Signal Strength sensor
+
+v1.1
+- Added Outside temperature sensor for ATA Devices (only work when Outside Unit is working)
+
+v1.0
+- [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved.
