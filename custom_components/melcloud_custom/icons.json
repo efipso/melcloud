@@ -12,11 +12,19 @@
       },
       "wifi_signal": {
         "default": "mdi:wifi"
+      },
+      "error_message": {
+        "default": "mdi:message-alert"
       }
+    },
+    "binary_sensor": {
+      "error_state": {
+        "default": "mdi:alert"
+      }
+    },
+    "services": {
+      "set_vane_horizontal": "mdi:arrow-left-right",
+      "set_vane_vertical": "mdi:arrow-up-down"
     }
-  },
-  "services": {
-    "set_vane_horizontal": "mdi:arrow-left-right",
-    "set_vane_vertical": "mdi:arrow-up-down"
   }
 }

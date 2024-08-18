@@ -90,6 +90,9 @@
       },
       "wifi_signal": {
         "name": "Wifi Signal Strength"
+      },
+      "error_message": {
+        "name": "Error Message"
       }
     },
     "binary_sensor": {

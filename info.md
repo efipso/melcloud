@@ -15,6 +15,11 @@ It's done basically for my own use.
 
 ## Changelog
 
+v1.4
+- Added Error Message sensor
+- Changed Error State Entity Category
+- Changed WIFI Signal Strength Entity Category
+
 v1.3
 - Added Error State sensor
 

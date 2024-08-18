@@ -17,6 +17,7 @@ from homeassistant.const import (
     SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
     UnitOfEnergy,
     UnitOfTemperature,
+    EntityCategory,
 )
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
@@ -69,9 +70,17 @@ ATA_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
         native_unit_of_measurement=SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
         device_class=SensorDeviceClass.SIGNAL_STRENGTH,
         state_class=SensorStateClass.MEASUREMENT,
+        entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda x: x.device.wifi_signal,
         enabled=lambda x: True,
         entity_registry_enabled_default=False,
+    ),
+    MelcloudSensorEntityDescription(
+        key="error_message",
+        translation_key="error_message",
+        entity_category=EntityCategory.DIAGNOSTIC,
+        value_fn=lambda x: x.device.error_code if x.device.has_error else 'No error',
+        enabled=lambda x: True,
     ),
 )
 ATW_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
@@ -99,9 +108,17 @@ ATW_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
         native_unit_of_measurement=SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
         device_class=SensorDeviceClass.SIGNAL_STRENGTH,
         state_class=SensorStateClass.MEASUREMENT,
+        entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda x: x.device.wifi_signal,
         enabled=lambda x: True,
         entity_registry_enabled_default=False,
+    ),
+    MelcloudSensorEntityDescription(
+        key="error_message",
+        translation_key="error_message",
+        entity_category=EntityCategory.DIAGNOSTIC,
+        value_fn=lambda x: x.device.error_code if x.device.has_error else 'No error',
+        enabled=lambda x: True,
     ),
 )
 ATW_ZONE_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (

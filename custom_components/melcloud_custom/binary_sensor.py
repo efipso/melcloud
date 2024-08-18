@@ -12,7 +12,7 @@ from homeassistant.components.binary_sensor import (
     BinarySensorEntityDescription,
 )
 from homeassistant.config_entries import ConfigEntry
-
+from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 
@@ -34,6 +34,7 @@ ATA_BINARY_SENSORS: tuple[MelcloudBinarySensorEntityDescription, ...] = (
         key="error_state",
         translation_key="error_state",
         device_class=BinarySensorDeviceClass.PROBLEM,
+        entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda x: x.device.has_error,
         enabled=lambda x: True,
     ),
@@ -43,6 +44,7 @@ ATW_BINARY_SENSORS: tuple[MelcloudBinarySensorEntityDescription, ...] = (
         key="error_state",
         translation_key="error_state",
         device_class=BinarySensorDeviceClass.PROBLEM,
+        entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda x: x.device.has_error,
         enabled=lambda x: True,
     ),
