@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+import dataclasses
 from collections.abc import Callable
 from typing import Any
 
@@ -21,7 +21,7 @@ from .const import DOMAIN
 from .pymelcloud import DEVICE_TYPE_ATA, DEVICE_TYPE_ATW
 
 
-@dataclass
+@dataclasses.dataclass(frozen=True, kw_only=True)
 class MelcloudBinarySensorEntityDescription(BinarySensorEntityDescription):
     """Describes Melcloud binary sensor entity."""
 
