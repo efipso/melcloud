@@ -17,6 +17,7 @@ It's done basically for my own use.
 
 v1.5
 - Added Last Updated sensor.
+- Update to last AppVersion on login
 
 v1.4.1
 - Minor fixes

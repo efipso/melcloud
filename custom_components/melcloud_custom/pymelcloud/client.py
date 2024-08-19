@@ -26,7 +26,7 @@ async def _do_login(_session: ClientSession, email: str, password: str):
         "Email": email,
         "Password": password,
         "Language": 0,
-        "AppVersion": "1.19.1.1",
+        "AppVersion": "1.31.0",
         "Persist": True,
         "CaptchaResponse": None,
     }
