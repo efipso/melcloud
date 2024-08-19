@@ -82,6 +82,16 @@ ATA_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
         value_fn=lambda x: x.device.error_code if x.device.has_error else 'No error',
         enabled=lambda x: True,
     ),
+    MelcloudSensorEntityDescription(
+        key="last_update",
+        translation_key="last_update",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        entity_category=EntityCategory.DIAGNOSTIC,
+        state_class=None,
+        native_unit_of_measurement=None,
+        value_fn=lambda x: x.device.last_seen,
+        enabled=lambda x: True,
+    ),
 )
 ATW_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
     MelcloudSensorEntityDescription(
@@ -118,6 +128,16 @@ ATW_SENSORS: tuple[MelcloudSensorEntityDescription, ...] = (
         translation_key="error_message",
         entity_category=EntityCategory.DIAGNOSTIC,
         value_fn=lambda x: x.device.error_code if x.device.has_error else 'No error',
+        enabled=lambda x: True,
+    ),
+    MelcloudSensorEntityDescription(
+        key="last_update",
+        translation_key="last_update",
+        device_class=SensorDeviceClass.TIMESTAMP,
+        entity_category=EntityCategory.DIAGNOSTIC,
+        state_class=None,
+        native_unit_of_measurement=None,
+        value_fn=lambda x: x.device.last_seen,
         enabled=lambda x: True,
     ),
 )

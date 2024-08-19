@@ -15,6 +15,9 @@
       },
       "error_message": {
         "default": "mdi:message-alert"
+      },
+      "last_update": {
+        "default": "mdi:clock-outline"
       }
     },
     "binary_sensor": {

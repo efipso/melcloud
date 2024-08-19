@@ -15,6 +15,12 @@ It's done basically for my own use.
 
 ## Changelog
 
+v1.5
+- Added Last Updated sensor.
+
+v1.4.1
+- Minor fixes
+
 v1.4
 - Added Error Message sensor
 - Changed Error State Entity Category
@@ -30,7 +36,7 @@ v1.2
 - Added WIFI Signal Strength sensor
 
 v1.1
-- Added Outside temperature sensor for ATA Devices (only work when Outside Unit is working)
+- Added Outside temperature sensor for ATA Devices (only gives a value when Outside Unit is working)
 
 v1.0
 - [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved.

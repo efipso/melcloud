@@ -93,6 +93,9 @@
       },
       "error_message": {
         "name": "Error Message"
+      },
+      "last_update": {
+        "name": "Last Updated"
       }
     },
     "binary_sensor": {

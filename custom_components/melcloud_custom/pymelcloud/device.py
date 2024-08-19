@@ -1,6 +1,7 @@
 """Base MELCloud device."""
 
 import asyncio
+import pytz
 from abc import ABC, abstractmethod
 from datetime import datetime, timedelta
 from decimal import ROUND_HALF_UP, Decimal
@@ -178,9 +179,9 @@ class Device(ABC):
         """
         if self._state is None:
             return None
-        return datetime.strptime(
+        return pytz.utc.localize(datetime.strptime(
             self._state.get("LastCommunication"), "%Y-%m-%dT%H:%M:%S.%f"
-        )
+        ))
 
     @property
     def power(self) -> Optional[bool]:
