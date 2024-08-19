@@ -13,31 +13,9 @@ This custom component is based on the native Home Assistant [MELCloud component]
 
 It's done basically for my own use.
 
-## Changelog
-
-v1.5
+## What's on last update?
+1.5.0
 - Added Last Updated sensor.
 - Update to last AppVersion on login
 
-v1.4.1
-- Minor fixes
-
-v1.4
-- Added Error Message sensor
-- Changed Error State Entity Category
-- Changed WIFI Signal Strength Entity Category
-
-v1.3
-- Added Error State sensor
-
-v1.2.1
-- Minor fixes
-
-v1.2
-- Added WIFI Signal Strength sensor
-
-v1.1
-- Added Outside temperature sensor for ATA Devices (only gives a value when Outside Unit is working)
-
-v1.0
-- [PyMelCloud library](https://github.com/vilppuvuorinen/pymelcloud) are incorporated to this integration, as repository has been archieved.
+Full Changelog: https://github.com/efipso/melcloud/blob/main/CHANGELOG.md
